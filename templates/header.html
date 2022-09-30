@@ -1,0 +1,59 @@
+{{define "header"}}
+<header>
+    <nav class="navbar topline" role="navigation">
+        <div class="container-fluid">
+            <div class="userpanel">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs">
+                    <svg class='icon '>
+                        <use href="/public/img/solid.svg#search"></use>
+                    </svg>
+                </button>
+                <a href="#"
+                   class="btn btn-primary"
+                   data-toggle="modal"
+                   data-target="#MYenter">
+                    <svg class='icon '>
+                        <use href="/public/img/solid.svg#users"></use>
+                    </svg>
+                    <span>Sign In</span>
+                </a>
+                <div class="userbuttons">
+                    <a data-target="#MYenter"
+                       class="btn btn-success"
+                       href="#"
+                       title="Upload new manual"
+                       id="upload-button">
+                        <svg class='icon '>
+                            <use href="/public/img/solid.svg#cloud-upload"></use>
+                        </svg>
+                        <span>Upload</span>
+                    </a>
+                </div>
+            </div>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/" title="Manuals Library">
+                    <img alt="ManualsLib"
+                         src="//static.manualslib.com/public/img/manualslib_de.png"/>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs">
+                <form class="navbar-form mainsearch" role="search" id="search_form">
+                    <div class="form-group">
+                        <input type="search"
+                               class="form-control"
+                               placeholder="Search for manual"
+                               id="typehead"
+                               name="keyword"
+                               value="">
+                        <button type="submit" class="btn btn-lib-search">
+                            <svg class='icon '>
+                                <use href="/public/img/solid.svg#search"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+{{end}}
