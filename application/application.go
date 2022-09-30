@@ -50,19 +50,11 @@ func (app *Application) MiddlewareStruct() (*interpose.Middleware, error) {
 }
 
 func (app *Application) mux() *mux.Router {
-	MustLogin := middlewares.MustLogin
-
 	router := mux.NewRouter()
 	router.Handle("/", http.HandlerFunc(handlers.GetIndex)).Methods("GET")
-	router.Handle("/brand", http.HandlerFunc(handlers.GetBrand)).Methods("GET")
-	router.Handle("/brand/product", http.HandlerFunc(handlers.GetBrandProduct)).Methods("GET")
+	router.Handle("/brand/{id:[0-9a-z]+}", http.HandlerFunc(handlers.GetBrand)).Methods("GET")
+	router.Handle("/product/{b:[0-9a-z]+}/{p:[\\-0-9a-z]+}", http.HandlerFunc(handlers.GetBrandProduct)).Methods("GET")
 	router.Handle("/users", http.HandlerFunc(handlers.GetAccountHome)).Methods("GET")
-	router.HandleFunc("/users/signup", handlers.GetSignup).Methods("GET")
-	router.HandleFunc("/users/signup", handlers.PostSignup).Methods("POST")
-	router.HandleFunc("/users/login", handlers.GetLogin).Methods("GET")
-	router.HandleFunc("/users/login", handlers.PostLogin).Methods("POST")
-	router.HandleFunc("/users/logout", handlers.GetLogout).Methods("GET")
-	router.Handle("/users/{id:[0-9]+}", MustLogin(http.HandlerFunc(handlers.PostPutDeleteUsersID))).Methods("POST", "PUT", "DELETE")
 	router.PathPrefix("/").Handler(http.FileServer(http.Dir("static")))
 	return router
 }

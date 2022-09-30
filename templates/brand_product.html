@@ -23,6 +23,8 @@
     <script src="//static.manualslib.com/public/chunk.commons.ccd5.min.js" defer></script>
     <script src="//static.manualslib.com/public/manual.4226.min.js" id="appJs" defer></script>
     <link rel="stylesheet" href="/project/css/brand_product.css">
+    <link rel="stylesheet" href="{{ .Css1 }}">
+    <link rel="stylesheet" href="{{ .Css2 }}">
     <link rel="search" href="https://www.manualslib.com/opensearchdescription.xml"
           type="application/opensearchdescription+xml" title="Search"/>
     <link rel="preload"
@@ -37,17 +39,9 @@
     <link rel="icon" type="/image/vnd.microsoft.icon" href="/favicon-16.png">
     <link rel="SHORTCUT ICON" href="/favicon.ico">
 </head>
-<body class="manualpage">
+<body>
 <div id="wrap">
     {{template "header" .}}
-    <div id="bookmark-added-alert" class="alert alert-success  alert-dismissable" style="display:none">
-        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-        <strong>Bookmark added</strong>
-    </div>
-    <div id="my-manual-added-alert" class="alert alert-success  alert-dismissable" style="display:none">
-        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-        <strong>Added to my manuals</strong>
-    </div>
     <div class="container-fluid main manualWR">
         <div class="wide-wrap">
             <div class="manual-header">
@@ -81,21 +75,51 @@
                 </div>
             </div>
         </div>
-        <div class="manualpages_wrap">
-            <div class="manualpages mp_horizontal owl-loading collapse in"
-                 id="pages_viewer">
-                <span class="prev"><svg class='icon '><use href="/public/img/solid.svg#chevron-left"></use></svg></span>
-                <span class="next"><svg class='icon '><use
-                        href="/public/img/solid.svg#chevron-right"></use></svg></span>
+        <div class="tab-content">
+            {{ .Content }}
+        </div>
+        <div class="pager" id="mpager">
+            <div class="container">
+                <div class="row">
+                    <div class="pag-pprev">
+                        <a class="pprev btn btn-primary btn-lg btn-disabled btn-mpage-1">
+                            <svg class='icon icon-va-pb' ><use href="/public/img/solid.svg#chevron-left"></use></svg>Previous<span>&nbsp;Page</span>
+                        </a>
+                    </div>
+                    <div class="pag-pnext">
+                        <a href="/manual/1189747/Honeywell-T6-Pro.html?page=2#manual"
+                           class="pnext btn btn-primary btn-lg btn-mpage-1">
+                            Next<span>&nbsp;Page</span><svg class='icon icon-va-pb' ><use href="/public/img/solid.svg#chevron-right"></use></svg>
+                        </a>
+                    </div>
+                    <div class="pag-pages">
+                        <ul class="pagination">
+                            <li class="active">
+                                <a class="plink"
+                                   href="/manual/1189747/Honeywell-T6-Pro.html#manual">1</a>
+                            </li>
+                            <li class="">
+                                <a class="plink"
+                                   href="/manual/1189747/Honeywell-T6-Pro.html?page=2#manual">2</a>
+                            </li>
+                            <li class="">
+                                <a class="plink"
+                                   href="/manual/1189747/Honeywell-T6-Pro.html?page=3#manual">3</a>
+                            </li>
+                            <li class="">
+                                <a class="plink"
+                                   href="/manual/1189747/Honeywell-T6-Pro.html?page=4#manual">4</a>
+                            </li>
+                            <li class="">
+                                <a class="plink"
+                                   href="/manual/1189747/Honeywell-T6-Pro.html?page=5#manual">5</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="manualcenter">
-            <div class="searchinmanualblock">
-            </div>
-            <div class="tab-content">
 
-            </div>
-        </div>
         <section class="whitebg">
             <div class="container">
                 <h4 class="blockhead text-center">

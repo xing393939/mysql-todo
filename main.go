@@ -1,7 +1,6 @@
 package main
 
 import (
-	"encoding/gob"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
 	"github.com/tylerb/graceful"
@@ -9,12 +8,7 @@ import (
 	"time"
 
 	"mysql-todo/application"
-	"mysql-todo/models"
 )
-
-func init() {
-	gob.Register(&models.UserRow{})
-}
 
 func newConfig() (*viper.Viper, error) {
 	c := viper.New()

@@ -16,8 +16,6 @@
     <script src="//static.manualslib.com/public/app.4226.min.js" id="appJs" defer></script>
     <link rel="search" href="https://www.manualslib.com/opensearchdescription.xml"
           type="application/opensearchdescription+xml" title="Search"/>
-    <script>var canShowInterstitial = false;</script>
-    <!-- Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
     <link rel="preconnect" href="https://quantcast.mgr.consensu.org">
     <link rel="shortcut icon" href="/favicon.ico"/>
     <link rel="apple-touch-icon" href="/favicon-152.png">
@@ -25,8 +23,6 @@
     <link rel="icon" href="/favicon-32.png" sizes="32x32">
     <link rel="icon" type="/image/vnd.microsoft.icon" href="/favicon-16.png">
     <link rel="SHORTCUT ICON" href="/favicon.ico">
-    <script>var addthis_config = {services_exclude: 'print'}, stats = [];</script>
-    <script>var pageType = "2";</script>
 </head>
 <body class="">
 <div id="wrap">
@@ -38,21 +34,15 @@
                 <div class="cover" style="opacity:.2;"></div>
                 <ol class="breadcrumb">
                     <li><a href="/">Manuals</a></li>
-                    <li><a href="/brand/">Brands</a></li>
-                    <li><a href="/brand/kenmore/">Kenmore Manuals</a></li>
+                    <li><a href="/brand/{{ .Brand }}">{{ .Brand }}</a></li>
                 </ol>
-                <h1 class="Uheader">Kenmore manuals</h1>
-                <h2 class="mansminf">
-                    ManualsLib has more than 16355 Kenmore manuals </h2>
-                <div class="popxat">
-                    <div>Popular Categories:</div>
-                </div>
-
+                <h1 class="Uheader">{{ .Brand }}</h1>
+                <h2 class="mansminf">ManualsLib has more than 16355 Kenmore manuals </h2>
             </div>
         </div>
 
         <div class="cathead">
-            <a href="/brand/kenmore/accessories.html">Accessories</a>
+            <a href="/brand/{{ .Brand }}">{{ .Brand }}</a>
         </div>
         <section class="centerfluid">
             <div class="row modelheader">
@@ -70,72 +60,16 @@
 
             <div class="category">
                 <div>
+                    {{ range .Products }}
                     <div class="row tabled">
                         <div class="col-xs-3 col-sm-2">
-                            105.20002410
+                            <a href="/product/{{ $.Brand }}/{{ .Name }}-page1">{{ .Name }}</a>
                         </div>
                         <div class="col-xs-9 col-sm-10 manuals-col">
-                            <a href="/manual/1350327/Kenmore-Assurelink-Smartplug.html"
-                               title="7 pages ">Use & Care Manual</a>
+                            <a href="/product/{{ $.Brand }}/{{ .Name }}-page1" title="{{ .Name }}">Owner's Manual</a>
                         </div>
                     </div>
-                    <div class="row tabled">
-                        <div class="col-xs-3 col-sm-2">
-                            Assurelink Smartplug
-                        </div>
-                        <div class="col-xs-9 col-sm-10 manuals-col">
-                            <a href="/manual/1350327/Kenmore-Assurelink-Smartplug.html"
-                               title="7 pages ">Manual</a>
-                        </div>
-                    </div>
-                    <div class="row tabled">
-                        <div class="col-xs-3 col-sm-2">
-                            <a href="/products/Kenmore-Kc01zcntz000-2930835.html">
-                                KC01ZCNTZ000 </a>
-                        </div>
-                        <div class="col-xs-9 col-sm-10 manuals-col">
-                            <a href="/manual/511457/Kenmore-Power-Mate-Kc50xbzrzu01.html#product-KC01ZCNTZ000"
-                               title="40 pages Power Nozzle">Owner's Manual</a>
-                        </div>
-                    </div>
-                    <div class="row tabled">
-                        <div class="col-xs-3 col-sm-2">
-                            <a href="/products/Kenmore-Power-Mate-Kc50xbzrzu01-2930836.html">
-                                Power-Mate KC50XBZRZU01 </a>
-                        </div>
-                        <div class="col-xs-9 col-sm-10 manuals-col">
-                            <a href="/manual/490692/Kenmore-Power-Mate-Kc50xbzrzu01.html"
-                               title="16 pages Power Nozzle">Owner's Manual</a>
-                            &nbsp;&nbsp;&bull;&nbsp;&nbsp; <a href="/manual/511457/Kenmore-Power-Mate-Kc50xbzrzu01.html"
-                                                              title="40 pages Power Nozzle">Owner's Manual</a>
-                        </div>
-                    </div>
-                    <div class="row tabled">
-                        <div class="col-xs-3 col-sm-2">
-                            <a href="/products/Kenmore-Power-Mate-Kc50xbztzu01-2930833.html">
-                                Power-Mate KC50XBZTZU01 </a>
-                        </div>
-                        <div class="col-xs-9 col-sm-10 manuals-col">
-                            <a href="/manual/490692/Kenmore-Power-Mate-Kc50xbzrzu01.html#product-Power-Mate KC50XBZTZU01"
-                               title="16 pages Power Nozzle">Owner's Manual</a>
-                            &nbsp;&nbsp;&bull;&nbsp;&nbsp; <a
-                                href="/manual/511457/Kenmore-Power-Mate-Kc50xbzrzu01.html#product-Power-Mate KC50XBZTZU01"
-                                title="40 pages Power Nozzle">Owner's Manual</a>
-                        </div>
-                    </div>
-                    <div class="row tabled">
-                        <div class="col-xs-3 col-sm-2">
-                            <a href="/products/Kenmore-Power-Mate-Kc50xcmwzu01-2930832.html">
-                                Power-Mate KC50XCMWZU01 </a>
-                        </div>
-                        <div class="col-xs-9 col-sm-10 manuals-col">
-                            <a href="/manual/490692/Kenmore-Power-Mate-Kc50xbzrzu01.html#product-Power-Mate KC50XCMWZU01"
-                               title="16 pages Power Nozzle">Owner's Manual</a>
-                            &nbsp;&nbsp;&bull;&nbsp;&nbsp; <a
-                                href="/manual/511457/Kenmore-Power-Mate-Kc50xbzrzu01.html#product-Power-Mate KC50XCMWZU01"
-                                title="40 pages Power Nozzle">Owner's Manual</a>
-                        </div>
-                    </div>
+                    {{ end }}
                 </div>
             </div>
         </section>
